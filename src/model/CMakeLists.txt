@@ -6,7 +6,7 @@ add_library(Model STATIC
         ${DIR_INC}/model/Scene.h
         Projection.cpp
         Camera.cpp
-        ../../include/model/Object.h
+        ../../include/model/Node.h
         ../../include/model/Mesh.h
         ../../include/model/texture_types.hpp
 )
