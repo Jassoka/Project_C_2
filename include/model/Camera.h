@@ -8,17 +8,21 @@
 #include <glm/glm.hpp>
 
 class Camera {
-
-
 public:
-    Camera(glm::vec3 up, glm::vec3 right, glm::vec3 lookAt, glm::vec3 position);
+    Camera(glm::vec3 up, glm::vec3 right, glm::vec3 lookAt, glm::vec3 position, double FOV, double nearPlane, double farPlane, double aspectRatio);
 
+    const glm::mat4& computePerspectiveMatrix();
     const glm::mat4& computeViewMatrix();
 
 private:
     glm::mat4 mRotationMatrix = glm::mat4();
     glm::mat4 mTranslationMatrix = glm::mat4();
     glm::mat4 mViewMatrix = glm::mat4();
+    glm::mat4 mPerspectiveMatrix = glm::mat4();
+    double mFOV;
+    double mNearPlane;
+    double mFarPlane;
+    double mAspectRatio;
 };
 
 

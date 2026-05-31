@@ -4,7 +4,6 @@ add_library(Model STATIC
         ${DIR_INC}/model/graphicPipeline.h
         ${DIR_INC}/model/Projection.h
         ${DIR_INC}/model/Scene.h
-        Projection.cpp
         Camera.cpp
         ../../include/model/Node.h
         ../../include/model/Mesh.h
